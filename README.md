@@ -1,6 +1,6 @@
 ## Python教程
 
-### 环境准备
+### [环境准备](src/00Prepare/README.md)
 
 ### 变量
 
