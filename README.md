@@ -14,6 +14,6 @@
 
 ### [Dict和Set](course/06DictSet/README.md)
 
-### [循环2](course/07Loop2/README.md)
+### [遍历](course/07Loop2/README.md)
 
 ### [函数](course/08Function/README.md)
