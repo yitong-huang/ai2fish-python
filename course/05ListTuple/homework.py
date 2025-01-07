@@ -6,4 +6,18 @@ grade = [["huang", 90], ["li", 80], ["wang", 95], ["zhao", 55]]
 # 并且把等级作为内部元素的第一个元素放进数组里
 
 # 预期的结果
-# grade = [["A", "huang", 90], ["B", "li", 80], ["A", "wang", 95], ["D", "zhao", 55]]
+# grade = [["A", "huang", 90], ["B", "li", 80],
+# ["A", "wang", 95], ["D", "zhao", 55]]
+
+for g in grade:
+    # print(g[0], g[1])
+    if g[1] >= 90:
+        g.insert(0, "A")
+    elif g[1] >= 80:
+        g.insert(0, "B")
+    elif g[1] >= 60:
+        g.insert(0, "C")
+    else:
+        g.insert(0, "D")
+
+print(grade)
