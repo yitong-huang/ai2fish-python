@@ -61,6 +61,7 @@ class Runnable(object):
 class Dog(Animal, Runnable):
     def wangwang(self):
         print("Dog is wangwang")
+        print("xxxx")
     def run(self):
         print("Dog is running")
 
@@ -72,4 +73,36 @@ class Elephant(Animal):
 kiki = Dog()
 kiki.run()
 kiki.eat()
-# e.run()
+
+
+class Animal(object):
+    def jiao(self):
+        print("jiao")
+
+class Dog(Animal):
+    def __init__(self, n):
+        self.name = n
+    def jiao(self): # 重写 覆盖 override
+        print("wang")
+
+class Cat(Animal):
+    def __init__(self, n):
+        self.name = n
+    def jiao(self):
+        print("miao")
+
+class Elephant(Animal):
+    def __init__(self, n):
+        self.name = n
+
+a = Dog("gou")
+b = Cat("mm")
+c = Animal()
+d = Elephant("ee")
+
+def jiao_twice(l):  # 变量
+    for item in l:
+        item.jiao()
+        item.jiao()
+
+jiao_twice([a, b, c, d])

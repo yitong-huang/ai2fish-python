@@ -90,11 +90,11 @@ def tick():
 
 def main():
     tracer(False)
-    init()
+    # init()
     setup_clock(160)
     tracer(True)
-    tick()
-    mainloop()
+    # tick()
+    done()
 
 
 main()
