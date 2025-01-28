@@ -1,4 +1,4 @@
- #!/usr/bin/env python
+# !/usr/bin/env python
 """
 A real world program to present meal specials to customers from a restaurant and with a note for each meal. If the meal enter is not on the list
 then the program will print an error message. The program should continously request the customers for input.
@@ -22,20 +22,25 @@ lunch_description = " A soul warming bowl of steaming rice, packed with protein 
 dinner = "Teppanyaki"
 dinner_description = " Noodles sizzling from the grill, turned quickly so the noodles are soft and the vegetables stay crunchy"
 
-
-
 # declare your while-loop
 
 
 # Request the user to enter their meal time (using input() function)
+meal_time = input("Which meal-time do you want? [breakfast, lunch, dinner](or enter “n” to end-loop): ")
+if meal_time == "breakfast":
+    print("*** Specials for breakfast ***")
+    print(breakfast)
+    print(breakfast_description)
+elif meal_time == "lunch":
+    print()
+elif meal_time == "dinner":
+    print()
+elif meal_time == 'n':
+    print("Thank you for your patronage. Hope to see you next time!!!")
+    quit()
+else:
+    print("*** Specials for {} ***".format(meal_time))
+# write the condition for ending the loop
 
-   meal_time = # complete this construct
-
-    # write the condition for ending the loop
-  
 
 # using if, elif and else conditional statement to check and print the meal and description
-   
-   
-
-   

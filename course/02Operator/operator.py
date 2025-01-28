@@ -5,8 +5,8 @@ b = 3
 # print(c)注释
 # c = a // b
 # print(c)
-c = a ** b
-print(c)
+# c = a ** b
+# print(c)
 #
 # strA = "ab"
 # strB = "b"
@@ -24,3 +24,5 @@ print(c)
 # print(c)
 # c = not a
 # print(c)
+
+print(6 != 6)

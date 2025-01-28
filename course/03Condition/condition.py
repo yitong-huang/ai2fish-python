@@ -1,10 +1,14 @@
-a = 80
+complete = True # False
+grade = 95
 
-if a > 90:
-    print("A")
-elif a > 80:
-    print("B")
-elif a > 60:
-    print("C")
+
+# 完成 而且按分数去分级
+if complete:
+    if grade > 90:
+        print("A")
+    elif grade > 80:
+        print("B")
+    else:
+        print("C")
 else:
-    print("D")
+    print("fail..")

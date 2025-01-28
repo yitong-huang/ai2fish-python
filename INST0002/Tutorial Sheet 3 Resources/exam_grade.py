@@ -13,15 +13,31 @@ grade = 0
 graded_mark = 0
 
 # Prompt the student for input
-
+modules = int(input("How many modules do you have: "))
 
 # initialise the for-loop iteration (i) by 1
+total = 0
+try:
+    for i in range(modules):
+        grade = int(input("Please enter the grade for module number {}: ".format(i + 1)))
+        if grade < 0:
+            print("You have entered a negative number", grade)
+            print("Please enter only positive integer grades. Thank you!")
+            print("Your average grade is: 0")
+            print("Fail")
+        total = total + grade
+    average = total / modules
+    print("Your cumulative GPA is:", average)
+except ValueError:
+    print("Please enter only positive integer grades. Thank you!")
+    print("Your average grade is: 0")
+    print("Fail")
 
 
 # define your for-loop construct here
 
 # use a try and except block for this process to check for any mismatch entry (use the knowledge from the Lecture)
-        try:
+#        try:
 # compute the sum total of all grades entered
 
 
@@ -29,7 +45,7 @@ graded_mark = 0
 
 # All these computation should be inside the try and except block
 
-        except ValueError:
+        # except ValueError:
                # display the  message to be captured here
 
 

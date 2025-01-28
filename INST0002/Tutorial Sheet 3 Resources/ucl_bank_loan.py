@@ -11,8 +11,12 @@ UCL Bank loan program...
 
 
 # prompt customer to enter their income per year in pounds
-
-
+income = float(input("income per year in pounds: "))
 # check the condition using the brief in the tutorial sheet
-
-# display the output accordingly 
+# display the output accordingly
+if income >= 100_000:
+    print("xxx")
+elif income >= 50000:
+    print("yyy")
+else:
+    print("zzz")
