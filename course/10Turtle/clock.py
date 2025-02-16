@@ -1,13 +1,12 @@
 from turtle import *
 from datetime import *
 
-def skip(step):
+def skip(length):
     penup()
-    forward(step)
+    forward(length)
     pendown()
 
-def mk_hand(name, length):
-    # 注册turtle形状，建立表针turtle
+def register_hand(name, length):
     reset()
     begin_poly()
     forward(length)
@@ -16,13 +15,11 @@ def mk_hand(name, length):
     register_shape(name, hand_form)
 
 def init():
-    global sec_hand, min_hand, hour_hand, printer
+    global sec_hand, min_hand, hour_hand
     mode("logo")
-    # 重置turtle指向北
-    # 建立三个表针turtle并初始化
-    mk_hand("sec_hand", 150)
-    mk_hand("min_hand", 125)
-    mk_hand("hour_hand", 90)
+    register_hand("sec_hand", 150)
+    register_hand("min_hand", 125)
+    register_hand("hour_hand", 90)
     sec_hand = Turtle()
     sec_hand.shape("sec_hand")
     sec_hand.pencolor("red")
@@ -33,10 +30,6 @@ def init():
     for hand in sec_hand, min_hand, hour_hand:
         hand.shapesize(1, 1, 3)
         hand.speed(0)
-    # 建立输出文字turtle
-    printer = Turtle()
-    printer.hideturtle()
-    printer.penup()
 
 def setup_clock(radius):
     reset()
@@ -51,18 +44,7 @@ def setup_clock(radius):
             skip(-radius)
         right(6)
 
-def week(t):
-    week_day = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
-    return week_day[t.weekday()]
-
-def date(t):
-    y = t.year
-    m = t.month
-    d = t.day
-    return "%s %d %d" % (y, m, d)
-
 def tick():
-    # 绘制表针的动态显示
     t = datetime.today()
     second = t.second + t.microsecond * 0.000001
     minute = t.minute + second / 60.0
@@ -70,14 +52,7 @@ def tick():
     sec_hand.setheading(6 * second)
     min_hand.setheading(6 * minute)
     hour_hand.setheading(30 * hour)
-    tracer(False)
-    printer.forward(65)
-    printer.write(week(t), align="center", font=("Courier", 14, "bold"))
-    printer.back(130)
-    printer.write(date(t), align="center", font=("Courier", 14, "bold"))
-    printer.home()
-    tracer(True)
-    ontimer(tick, 1)  # 100ms后继续调用tick
+    ontimer(tick, 1)
 
 def main():
     tracer(False)

@@ -75,3 +75,14 @@ mainloop()
 * padx & pady:  
   分别表示组件与外部容器在x轴和y轴的间隔。  
   可以只提供一个数字，表示左右间隔或上下间隔，也可以提供一个两个项的元组表示左右间隔或上下间隔。不一定要一起设置。
+
+#### grid 依照表格的行列方式布局
+
+* column row
+
+![表格布局](grid.png)
+
+* columnspan rowspan
+
+![表格布局](grid-columnspan-rowspan.png)
+

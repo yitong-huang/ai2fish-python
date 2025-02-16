@@ -4,7 +4,6 @@ from functools import partial
 
 def create_calculator_window():
     window = tk.Tk()
-    window.geometry("320x400")
     window.title("计算器")
 
     display = tk.Label(window, text="", font=("Helvetica", 16), height=2, width=18)
