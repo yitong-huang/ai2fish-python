@@ -1,8 +1,7 @@
 import tkinter as tk
 from functools import partial
 
-
-def create_calculator_window():
+def main():
     window = tk.Tk()
     window.title("计算器")
 
@@ -72,9 +71,7 @@ def create_calculator_window():
             row += 1
 
     window.bind("<Key>", lambda event: on_keypress(event.char))
-
     window.mainloop()
 
 
-if __name__ == "__main__":
-    create_calculator_window()
+main()

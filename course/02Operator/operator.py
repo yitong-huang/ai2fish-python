@@ -1,28 +1,9 @@
-a = 4
-b = 3
 
-# c = a % b
-# print(c)注释
-# c = a // b
-# print(c)
-# c = a ** b
-# print(c)
-#
-# strA = "ab"
-# strB = "b"
-#
-# strC = strA + strB
-# print(strC)
-# strC = strA * 3
-# print(strC)
-#
-# a = True
-# b = False
-# c = a and b
-# print(c)
-# c = a or b
-# print(c)
-# c = not a
-# print(c)
 
-print(6 != 6)
+num = "1.1"
+a = 9
+
+print(float(num) + a)
+
+# 字符串 《==》 数字
+
