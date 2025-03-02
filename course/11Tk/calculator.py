@@ -1,13 +1,13 @@
-import tkinter as tk
+from tkinter import *
 from functools import partial
 
 def main():
-    window = tk.Tk()
+    window = Tk()
     window.title("计算器")
 
-    display = tk.Label(window, text="", font=("Helvetica", 16), height=2, width=18)
+    display = Label(window, text="", font=("Helvetica", 16), height=2, width=18)
     display.grid(row=0, column=0, columnspan=4, pady=10)
-
+    # 5
     def on_keypress(key):
         if key == "AC":
             display["text"] = ""
@@ -31,10 +31,8 @@ def main():
             except:
                 display["text"] = "Error"
         else:
-            if "=" in display["text"]:
-                display["text"] = ""
-            display["text"] += key
-
+            display["text"] = display["text"] + key
+                                # 99
     keys = [
         ("AC", on_keypress),
         ("←", on_keypress),
@@ -61,10 +59,11 @@ def main():
 
     row = 1
     col = 0
+    # key = "2"
     for key, command in keys:
-        button = tk.Button(window, text=key, font=("Helvetica", 12), height=2, width=5)
+        button = Button(window, text=key, font=("Helvetica", 12), height=2, width=5)
         button.grid(row=row, column=col, padx=5, pady=5)
-        button.configure(command=partial(command, key))
+        button.configure(command=partial(on_keypress, key))
         col += 1
         if col > 3:
             col = 0
