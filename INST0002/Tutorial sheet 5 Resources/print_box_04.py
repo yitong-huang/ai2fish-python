@@ -16,9 +16,9 @@
 
 # create the for loop containing the symbols, width and height of the box as input arguments
 
-    # use a try and except of exception to handle the error message
-    try:
-        # call the function and pass in the arguments (i.e. symbol, width and height)
-        pass
-    except Exception as err:
-       print('An exception happened: ' + str(err))
+# use a try and except of exception to handle the error message
+try:
+    # call the function and pass in the arguments (i.e. symbol, width and height)
+    pass
+except Exception as err:
+   print('An exception happened: ' + str(err))
