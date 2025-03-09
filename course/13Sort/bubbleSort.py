@@ -1,6 +1,3 @@
-from wheel.macosx_libfile import swap32
-
-
 def bubble_sort(arr):
     n = len(arr)
 
