@@ -5,6 +5,10 @@ def bubble_sort(arr):
     for i in range(n):
         # 标记是否发生了交换
         swapped = False
+        # i表示已经有多少个值排好序（排到了最后面），对应gif图的橘黄色
+        # n-i就是不再需要去处理这些排好序的数字
+        # -1是因为后面if的比较是arr[j]和arr[j+1]，
+        # 也就是说处理倒数第二个数字的时候就把最后一个数字比较了，所以-1，不需要处理最后一个数
         for j in range(n-i-1):
             if arr[j] > arr[j+1]:
                 # 交换位置
