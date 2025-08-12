@@ -12,7 +12,7 @@ enter the meal time that they are interested in. Write your if-statement to prin
 # Time: 23:02PM GMT
 
 
-# Declare the meal special (You don't need to change the variables in this script)
+# Declare the meal special (You don'data need to change the variables in this script)
 # Use these variables to write the program
 
 breakfast = "Texas Omelet"
