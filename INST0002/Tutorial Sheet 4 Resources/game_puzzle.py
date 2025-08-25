@@ -9,7 +9,7 @@
 # add the functions for the game puzzle according to the task brief 
 
 
-# take the input using the correct data type
+# take the input using the correct data.txt type
 
 
 # create a puzzle for extra credit, type it anyway or print any message you wish.

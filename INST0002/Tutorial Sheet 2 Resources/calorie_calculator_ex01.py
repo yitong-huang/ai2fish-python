@@ -8,7 +8,7 @@
 A program to compute the number of calories burnt
 """
 # take the input from the user
-# considering the various data types as required in the tutorial sheet brief
+# considering the various data.txt types as required in the tutorial sheet brief
 
 bw = float(input("Please enter bodyweight (kg): "))
 h = float(input("Please enter height (m): "))

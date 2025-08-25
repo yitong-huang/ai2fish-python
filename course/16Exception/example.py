@@ -1,5 +1,5 @@
 try:
-    f = open('data')
+    f = open('data.txt')
     print("xxx")
 except:
     print("here is except")

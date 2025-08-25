@@ -1,4 +1,4 @@
-f = open('data')  # read
+f = open('data.txt')  # read
 l = []
 
 for line in f:
@@ -19,7 +19,7 @@ for n in l:
 print(v)
 f.close()
 
-# f = open('data', 'r')
+# f = open('data.txt', 'r')
 # s = 0
 # t = 0
 # for line in f:
@@ -30,7 +30,7 @@ f.close()
 # print(mean)
 # f.close()
 #
-# f = open('data', 'r')
+# f = open('data.txt', 'r')
 # for line in f:
 #     s += int(line)
 

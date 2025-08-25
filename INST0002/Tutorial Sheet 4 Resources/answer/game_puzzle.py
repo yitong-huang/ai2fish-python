@@ -26,7 +26,7 @@ def divide(a, b):
     return a / b
 
 def main():
-# take the input using the correct data type
+# take the input using the correct data.txt type
     print("Let's do some math with just functions!")
 
     age1 = float(input("Enter first age: "))
