@@ -15,7 +15,7 @@ f.close()
 #     for line in f:
 #         print(line + "/n")
 #
-# with open('test', 'w') as f:
+# with open('test.py', 'w') as f:
 #     f.write('hello world')
 
 # a = f.read()
@@ -35,7 +35,7 @@ f.close()
 # f.close()
 #
 # # w -> write
-# f = open('test', "w")
+# f = open('test.py', "w")
 # f.write("222\n")
 # f.write("11")
 # f.write("333")

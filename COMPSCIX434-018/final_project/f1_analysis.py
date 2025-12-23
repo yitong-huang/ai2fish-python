@@ -13,7 +13,6 @@ try:
             row['year'] = int(row['year'])
             row['laps'] = float(row['laps'])
             row['date'] = datetime.strptime(row['date'], '%Y-%m-%d').date()
-            row['winner_name'] = row['winner_name'].replace(u'\xa0', ' ')
             try:
                 row['time'] = datetime.strptime(row['time'], '%H:%M:%S').time()
             except ValueError:
